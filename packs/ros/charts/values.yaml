@@ -1,0 +1,20 @@
+# Default values for Maven projects.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+image:
+  pullPolicy: IfNotPresent
+service:
+  name: ros
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 4567
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+ingress:
+  enabled: false
